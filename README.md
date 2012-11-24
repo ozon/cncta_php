@@ -1,6 +1,6 @@
 CnCTA_php
 =========
-
+A simple PHP class to create Web Services for [C&C:TA](https://www.tiberiumalliances.com)
 ### How use it
 ```php
 $cncta = TiberiumAlliances::getInstance();

@@ -1,7 +1,7 @@
 CnCTA_php
 =========
 
-## How use it
+### How use it
 ```php
 $cncta = TiberiumAlliances::getInstance();
 
@@ -15,3 +15,7 @@ $cncta->openGameSession();
 $cncta->get('GetPublicPlayerInfo', array('id'=>$playerID));
 ```
 More samples and details come soon ;)
+
+### More useful information
+* [Official statement to external scripts and tools](http://forum.alliances.commandandconquer.com/showthread.php?tid=9157)
+* [Webservices API discussion with some samples](http://forum.alliances.commandandconquer.com/showthread.php?tid=9502)

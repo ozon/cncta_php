@@ -85,7 +85,8 @@ class TiberiumAlliances
         // ok...we can make it better ;)
         $_last_serverId = substr( parse_url( $match[1], PHP_URL_PATH) ,1 );
 
-        $this->_session->sever = $this->getServer($_last_serverId);
+        $this->_session->server = $this->getServer($_last_serverId);
+        //$this->_session->server->Url = preg_replace('/http/', 'https', $this->_session->server->Url);
       }
 
     }
@@ -115,7 +116,8 @@ class TiberiumAlliances
         'version'=>-1,
         'platformId'=>1
         );
-      $result = $this->getData( '', 'OpenSession', $_post_data);
+      $url = $this->_session->server->Url . '/Presentation/Service.svc/ajaxEndpoint/';
+      $result = $this->getData( $url, 'OpenSession', $_post_data);
       $this->_session->key = $result->i;
     }
 
